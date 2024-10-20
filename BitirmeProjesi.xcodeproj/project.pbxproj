@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		06129EA12CC4A44400F29D36 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 06129EA02CC4A44400F29D36 /* Lottie */; };
+		062EB17F2CB853F1009B102E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 062EB17E2CB853F1009B102E /* Alamofire */; };
+		062EB1822CB85401009B102E /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 062EB1812CB85401009B102E /* RxSwift */; };
+		062EB1852CB85412009B102E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 062EB1842CB85412009B102E /* Kingfisher */; };
+		062EB1882CB856AB009B102E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 062EB1872CB856AB009B102E /* FirebaseFirestore */; };
+		0692A4522CC2D5090064E2E3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0692A4512CC2D5090064E2E3 /* FirebaseAuth */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		062316C22CB2A91200949F6B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +74,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				062EB1852CB85412009B102E /* Kingfisher in Frameworks */,
+				0692A4522CC2D5090064E2E3 /* FirebaseAuth in Frameworks */,
+				062EB1882CB856AB009B102E /* FirebaseFirestore in Frameworks */,
+				062EB1822CB85401009B102E /* RxSwift in Frameworks */,
+				062EB17F2CB853F1009B102E /* Alamofire in Frameworks */,
+				06129EA12CC4A44400F29D36 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +140,12 @@
 			);
 			name = BitirmeProjesi;
 			packageProductDependencies = (
+				062EB17E2CB853F1009B102E /* Alamofire */,
+				062EB1812CB85401009B102E /* RxSwift */,
+				062EB1842CB85412009B102E /* Kingfisher */,
+				062EB1872CB856AB009B102E /* FirebaseFirestore */,
+				0692A4512CC2D5090064E2E3 /* FirebaseAuth */,
+				06129EA02CC4A44400F29D36 /* Lottie */,
 			);
 			productName = BitirmeProjesi;
 			productReference = 062316AB2CB2A91000949F6B /* BitirmeProjesi.app */;
@@ -208,6 +229,13 @@
 			);
 			mainGroup = 062316A22CB2A91000949F6B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				062EB17D2CB853F1009B102E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				062EB1802CB85401009B102E /* XCRemoteSwiftPackageReference "RxSwift" */,
+				062EB1832CB85412009B102E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				062EB1862CB856AB009B102E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				06129E9F2CC4A44400F29D36 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 062316AC2CB2A91000949F6B /* Products */;
 			projectDirPath = "";
@@ -569,6 +597,82 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		06129E9F2CC4A44400F29D36 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+		062EB17D2CB853F1009B102E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		062EB1802CB85401009B102E /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.8.0;
+			};
+		};
+		062EB1832CB85412009B102E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.3;
+			};
+		};
+		062EB1862CB856AB009B102E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		06129EA02CC4A44400F29D36 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06129E9F2CC4A44400F29D36 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		062EB17E2CB853F1009B102E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 062EB17D2CB853F1009B102E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		062EB1812CB85401009B102E /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 062EB1802CB85401009B102E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		062EB1842CB85412009B102E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 062EB1832CB85412009B102E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		062EB1872CB856AB009B102E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 062EB1862CB856AB009B102E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		0692A4512CC2D5090064E2E3 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 062EB1862CB856AB009B102E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 062316A32CB2A91000949F6B /* Project object */;
 }
