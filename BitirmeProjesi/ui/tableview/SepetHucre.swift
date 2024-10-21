@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SepetHucre: UITableViewCell {
 
@@ -18,6 +19,7 @@ class SepetHucre: UITableViewCell {
     
     var sepet: Sepet?
     var urunlerSepeti: UrunlerSepeti?
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

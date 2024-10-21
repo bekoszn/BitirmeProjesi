@@ -8,11 +8,14 @@
 
 import UIKit
 
+
 class Sepet : UIViewController {
     
+    @IBOutlet weak var labelBaslik: UILabel!
     @IBOutlet weak var sepetTableView: UITableView!
     @IBOutlet weak var labelSepetToplam: UILabel!
     var viewModel = SepetViewModel()
+
     
     var sepetListesi = [UrunlerSepeti]()
     

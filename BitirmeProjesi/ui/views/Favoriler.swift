@@ -1,9 +1,3 @@
-//
-//  ViewController.swift
-//  FilmlerApp
-//
-//  Created by Kasım on 9.08.2023.
-//
 
 import UIKit
 import Kingfisher
@@ -11,6 +5,7 @@ import FirebaseFirestore
 import RxSwift
 
 class Favoriler: UIViewController {
+    @IBOutlet weak var labelBaslik: UILabel!
     @IBOutlet weak var favorilerCollectionView: UICollectionView!
     var favoriListesi = [Urunler]()
     var viewModel = FavorilerViewModel()
