@@ -7,6 +7,7 @@
 
 
 import UIKit
+import FirebaseAuth
 
 
 class Sepet : UIViewController {
@@ -15,6 +16,9 @@ class Sepet : UIViewController {
     @IBOutlet weak var sepetTableView: UITableView!
     @IBOutlet weak var labelSepetToplam: UILabel!
     var viewModel = SepetViewModel()
+    var userId: String {
+        return Auth.auth().currentUser?.uid ?? "berke_ozguder"
+    }
 
     
     var sepetListesi = [UrunlerSepeti]()
@@ -26,7 +30,7 @@ class Sepet : UIViewController {
         sepetTableView.delegate = self
         sepetTableView.dataSource = self
         
-        viewModel.sepettekiUrunleriGetir(kullaniciAdi: "berke_ozguder")
+        viewModel.sepettekiUrunleriGetir(kullaniciAdi: userId)
 
         _ = viewModel.urunlerSepeti.subscribe(onNext: { liste in
             self.sepetListesi = self.groupUrunler(liste) // Ürünleri grupla
@@ -40,7 +44,7 @@ class Sepet : UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        viewModel.sepettekiUrunleriGetir(kullaniciAdi: "berke_ozguder")
+        viewModel.sepettekiUrunleriGetir(kullaniciAdi: userId)
     }
 
     

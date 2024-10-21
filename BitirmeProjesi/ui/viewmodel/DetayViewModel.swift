@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import Alamofire
+import FirebaseAuth
 
 class DetayViewModel {
     
@@ -17,6 +18,10 @@ class DetayViewModel {
     var urunToplamFiyat = BehaviorSubject<Int>(value: 0)
     private let disposeBag = DisposeBag()
     var urepo = UrunlerRepository()
+    var userId: String {
+        return Auth.auth().currentUser?.uid ?? "berke_ozguder"
+    }
+
     
     
     init() {
@@ -35,7 +40,7 @@ class DetayViewModel {
     
     
     func sepeteEkle(urun_ad:String,urun_resim:String,urun_kategori: String, urun_fiyat:Int,urun_marka:String, siparisAdeti:Int, kullaniciAdi:String){
-        urepo.sepeteEkle(ad: urun_ad, resim: urun_resim, kategori: urun_kategori, fiyat: urun_fiyat, marka: urun_marka, siparisAdeti: siparisAdeti, kullaniciAdi: "berke_ozguder")
+        urepo.sepeteEkle(ad: urun_ad, resim: urun_resim, kategori: urun_kategori, fiyat: urun_fiyat, marka: urun_marka, siparisAdeti: siparisAdeti, kullaniciAdi: userId)
     }
     
     func adetEkle (){
@@ -47,7 +52,7 @@ class DetayViewModel {
     }
     
     func favoriEkle(urun: Urunler) {
-        urepo.favoriEkle(urun: urun, userId: "berke_ozguder")
+        urepo.favoriEkle(urun: urun, userId: userId)
     }
     
 }

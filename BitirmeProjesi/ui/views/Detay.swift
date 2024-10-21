@@ -8,6 +8,7 @@
 import UIKit
 import Kingfisher
 import Alamofire
+import FirebaseAuth
 
 
 class Detay: UIViewController {
@@ -33,6 +34,9 @@ class Detay: UIViewController {
     var viewModel = DetayViewModel()
     var sepetListesi = [UrunlerSepeti]()
     var urepo = UrunlerRepository()
+    var userId: String {
+        return Auth.auth().currentUser?.uid ?? "berke_ozguder"
+    }
     
     
     
@@ -85,7 +89,7 @@ class Detay: UIViewController {
     @IBAction func sepeteEkleButton(_ sender: Any) {
         if let urun = urun {
             if let ad = isimLabel.text, let resim = urun.resim, let fiyat = fiyatLabel.text, let siparisAdeti = adetLabel.text {
-                viewModel.sepeteEkle(urun_ad: ad, urun_resim: resim, urun_kategori: urun.kategori!, urun_fiyat: Int(exactly: urun.fiyat!)!, urun_marka: urun.marka!, siparisAdeti: Int(siparisAdeti)!, kullaniciAdi: "berke_ozguder")
+                viewModel.sepeteEkle(urun_ad: ad, urun_resim: resim, urun_kategori: urun.kategori!, urun_fiyat: Int(exactly: urun.fiyat!)!, urun_marka: urun.marka!, siparisAdeti: Int(siparisAdeti)!, kullaniciAdi: userId)
             }
         }
     }

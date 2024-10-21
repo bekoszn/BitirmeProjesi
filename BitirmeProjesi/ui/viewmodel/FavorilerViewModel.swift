@@ -14,6 +14,7 @@
 
 import Foundation
 import RxSwift
+import FirebaseAuth
 
 class FavorilerViewModel {
     
@@ -24,7 +25,9 @@ class FavorilerViewModel {
     private let disposeBag = DisposeBag()
     var urepo = UrunlerRepository()
     
-    let userId = "berke_ozguder"
+    var userId: String {
+        return Auth.auth().currentUser?.uid ?? "berke_ozguder"
+    }
     
     init() {
         loadFavorites()
