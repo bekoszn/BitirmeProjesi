@@ -5,13 +5,6 @@
 //  Created by Berke Özgüder on 20.10.2024.
 //
 
-//
-//  DetayViewModel.swift
-//  BitirmeProjesi
-//
-//  Created by Berke Özgüder on 12.10.2024.
-//
-
 import Foundation
 import RxSwift
 import FirebaseAuth
