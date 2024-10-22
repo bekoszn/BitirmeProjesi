@@ -19,8 +19,10 @@ class FavorilerViewModel {
     var urepo = UrunlerRepository()
     
     var userId: String {
-        return Auth.auth().currentUser?.uid ?? "berke_ozguder"
-    }
+            return Auth.auth().currentUser?.uid ?? "berke_ozguder"
+        }
+    
+    
     
     init() {
         loadFavorites()

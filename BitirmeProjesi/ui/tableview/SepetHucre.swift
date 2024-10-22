@@ -19,6 +19,9 @@ class SepetHucre: UITableViewCell {
     
     var sepet: Sepet?
     var urunlerSepeti: UrunlerSepeti?
+    var userId: String {
+            return Auth.auth().currentUser?.uid ?? "berke_ozguder"
+        }
 
     
     override func awakeFromNib() {
@@ -35,7 +38,7 @@ class SepetHucre: UITableViewCell {
     @IBAction func buttonSil(_ sender: Any) {
         if let urunlerSepeti = urunlerSepeti {
             // Önce sepetten ürünü sil
-            sepet?.viewModel.sil(sepetId: urunlerSepeti.sepetId!, kullaniciAdi: "berke_ozguder")
+            sepet?.viewModel.sil(sepetId: urunlerSepeti.sepetId!, kullaniciAdi: userId)
             
             // Silme işlemi sonrası hemen ürünü listeden çıkar
             if let index = sepet?.sepetListesi.firstIndex(where: { $0.sepetId == urunlerSepeti.sepetId }) {
